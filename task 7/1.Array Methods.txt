@@ -1,0 +1,1540 @@
+
+a.Get all the countries from the asia continent/region using the filter function.
+
+//1.setup our http request
+let xhr=new XMLHttpRequest();
+
+//2.open the request
+xhr.open('GET','https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json')
+
+//setup our listener to process the complete request
+xhr.onload=function(){
+    if(xhr.status>=200&& xhr.status<300){
+        //only if request is ok and received the data
+        let data=JSON.parse(this.response);
+        console.log(data);
+
+        let data1=data.filter((data)=>data.region==="Asia");
+        console.log(data1);
+        data1.map((data)=>console.log(data.name));
+
+}else{
+//run if the request is not ok
+console.log("error");
+}
+}
+
+//send the request
+xhr.send();
+
+
+output(a):
+Afghanistan
+index.js:57 Armenia
+index.js:57 Azerbaijan
+index.js:57 Bahrain
+index.js:57 Bangladesh
+index.js:57 Bhutan
+index.js:57 Brunei Darussalam
+index.js:57 Cambodia
+index.js:57 China
+index.js:57 Georgia
+index.js:57 Hong Kong
+index.js:57 India
+index.js:57 Indonesia
+index.js:57 Iran (Islamic Republic of)
+index.js:57 Iraq
+index.js:57 Israel
+index.js:57 Japan
+index.js:57 Jordan
+index.js:57 Kazakhstan
+index.js:57 Kuwait
+index.js:57 Kyrgyzstan
+index.js:57 Lao People's Democratic Republic
+index.js:57 Lebanon
+index.js:57 Macao
+index.js:57 Malaysia
+index.js:57 Maldives
+index.js:57 Mongolia
+index.js:57 Myanmar
+index.js:57 Nepal
+index.js:57 Korea (Democratic People's Republic of)
+index.js:57 Oman
+index.js:57 Pakistan
+index.js:57 Palestine, State of
+index.js:57 Philippines
+index.js:57 Qatar
+index.js:57 Saudi Arabia
+index.js:57 Singapore
+index.js:57 Korea (Republic of)
+index.js:57 Sri Lanka
+index.js:57 Syrian Arab Republic
+index.js:57 Taiwan
+index.js:57 Tajikistan
+index.js:57 Thailand
+index.js:57 Timor-Leste
+index.js:57 Turkey
+index.js:57 Turkmenistan
+index.js:57 United Arab Emirates
+index.js:57 Uzbekistan
+index.js:57 Viet Nam
+index.js:57 Yemen
+
+
+
+b.Get all the countries with a population of less than 2 lakhs using filter function.
+
+//1.setup our http request
+let xhr=new XMLHttpRequest();
+
+//2.open the request
+xhr.open('GET','https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json')
+
+//setup our listener to process the complete request
+xhr.onload=function(){
+    if(xhr.status>=200&& xhr.status<300){
+        //only if request is ok and received the data
+        let data=JSON.parse(this.response);
+        console.log(data);
+
+        let data1=data.filter((data)=>data.population<=200000);
+        console.log(data1);
+        data1.map((data)=>console.log(data.name));
+
+}else{
+//run if the request is not ok
+console.log("error");
+}
+}
+
+//send the request
+xhr.send();
+
+output (b):
+Åland Islands
+index.js:57 American Samoa
+index.js:57 Andorra
+index.js:57 Anguilla
+index.js:57 Antarctica
+index.js:57 Antigua and Barbuda
+index.js:57 Aruba
+index.js:57 Bermuda
+index.js:57 Bonaire, Sint Eustatius and Saba
+index.js:57 Bouvet Island
+index.js:57 British Indian Ocean Territory
+index.js:57 United States Minor Outlying Islands
+index.js:57 Virgin Islands (British)
+index.js:57 Virgin Islands (U.S.)
+index.js:57 Cayman Islands
+index.js:57 Christmas Island
+index.js:57 Cocos (Keeling) Islands
+index.js:57 Cook Islands
+index.js:57 Curaçao
+index.js:57 Dominica
+index.js:57 Falkland Islands (Malvinas)
+index.js:57 Faroe Islands
+index.js:57 French Southern Territories
+index.js:57 Gibraltar
+index.js:57 Greenland
+index.js:57 Grenada
+index.js:57 Guam
+index.js:57 Guernsey
+index.js:57 Heard Island and McDonald Islands
+index.js:57 Holy See
+index.js:57 Isle of Man
+index.js:57 Jersey
+index.js:57 Kiribati
+index.js:57 Liechtenstein
+index.js:57 Marshall Islands
+index.js:57 Micronesia (Federated States of)
+index.js:57 Monaco
+index.js:57 Montserrat
+index.js:57 Nauru
+index.js:57 Niue
+index.js:57 Norfolk Island
+index.js:57 Northern Mariana Islands
+index.js:57 Palau
+index.js:57 Pitcairn
+index.js:57 Saint Barthélemy
+index.js:57 Saint Helena, Ascension and Tristan da Cunha
+index.js:57 Saint Kitts and Nevis
+index.js:57 Saint Lucia
+index.js:57 Saint Martin (French part)
+index.js:57 Saint Pierre and Miquelon
+index.js:57 Saint Vincent and the Grenadines
+index.js:57 Samoa
+index.js:57 San Marino
+index.js:57 Sao Tome and Principe
+index.js:57 Seychelles
+index.js:57 Sint Maarten (Dutch part)
+index.js:57 South Georgia and the South Sandwich Islands
+index.js:57 Svalbard and Jan Mayen
+index.js:57 Tokelau
+index.js:57 Tonga
+index.js:57 Turks and Caicos Islands
+index.js:57 Tuvalu
+index.js:57 Wallis and Futuna
+
+c.Print the following details name,capital,flag using foreach function.
+
+//1.setup our http request
+let xhr=new XMLHttpRequest();
+
+//2.open the request
+xhr.open('GET','https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json')
+
+//setup our listener to process the complete request
+xhr.onload=function(){
+    if(xhr.status>=200&& xhr.status<300){
+        //only if request is ok and received the data
+        let data=JSON.parse(this.response);
+        console.log(data);
+
+        data.forEach((data)=>{
+          console.log(`
+          name:${data.name}
+          capital:${data.capital}
+            flags:${data.flag}
+            `)
+        })
+
+}else{
+//run if the request is not ok
+console.log("error");
+}
+}
+
+//send the request
+xhr.send();
+
+output(c):
+name:Afghanistan
+          capital:Kabul
+            flags:https://restcountries.eu/data/afg.svg
+            
+index.js:56 
+          name:Åland Islands
+          capital:Mariehamn
+            flags:https://restcountries.eu/data/ala.svg
+            
+index.js:56 
+          name:Albania
+          capital:Tirana
+            flags:https://restcountries.eu/data/alb.svg
+            
+index.js:56 
+          name:Algeria
+          capital:Algiers
+            flags:https://restcountries.eu/data/dza.svg
+            
+index.js:56 
+          name:American Samoa
+          capital:Pago Pago
+            flags:https://restcountries.eu/data/asm.svg
+            
+index.js:56 
+          name:Andorra
+          capital:Andorra la Vella
+            flags:https://restcountries.eu/data/and.svg
+            
+index.js:56 
+          name:Angola
+          capital:Luanda
+            flags:https://restcountries.eu/data/ago.svg
+            
+index.js:56 
+          name:Anguilla
+          capital:The Valley
+            flags:https://restcountries.eu/data/aia.svg
+            
+index.js:56 
+          name:Antarctica
+          capital:
+            flags:https://restcountries.eu/data/ata.svg
+            
+index.js:56 
+          name:Antigua and Barbuda
+          capital:Saint John's
+            flags:https://restcountries.eu/data/atg.svg
+            
+index.js:56 
+          name:Argentina
+          capital:Buenos Aires
+            flags:https://restcountries.eu/data/arg.svg
+            
+index.js:56 
+          name:Armenia
+          capital:Yerevan
+            flags:https://restcountries.eu/data/arm.svg
+            
+index.js:56 
+          name:Aruba
+          capital:Oranjestad
+            flags:https://restcountries.eu/data/abw.svg
+            
+index.js:56 
+          name:Australia
+          capital:Canberra
+            flags:https://restcountries.eu/data/aus.svg
+            
+index.js:56 
+          name:Austria
+          capital:Vienna
+            flags:https://restcountries.eu/data/aut.svg
+            
+index.js:56 
+          name:Azerbaijan
+          capital:Baku
+            flags:https://restcountries.eu/data/aze.svg
+            
+index.js:56 
+          name:Bahamas
+          capital:Nassau
+            flags:https://restcountries.eu/data/bhs.svg
+            
+index.js:56 
+          name:Bahrain
+          capital:Manama
+            flags:https://restcountries.eu/data/bhr.svg
+            
+index.js:56 
+          name:Bangladesh
+          capital:Dhaka
+            flags:https://restcountries.eu/data/bgd.svg
+            
+index.js:56 
+          name:Barbados
+          capital:Bridgetown
+            flags:https://restcountries.eu/data/brb.svg
+            
+index.js:56 
+          name:Belarus
+          capital:Minsk
+            flags:https://restcountries.eu/data/blr.svg
+            
+index.js:56 
+          name:Belgium
+          capital:Brussels
+            flags:https://restcountries.eu/data/bel.svg
+            
+index.js:56 
+          name:Belize
+          capital:Belmopan
+            flags:https://restcountries.eu/data/blz.svg
+            
+index.js:56 
+          name:Benin
+          capital:Porto-Novo
+            flags:https://restcountries.eu/data/ben.svg
+            
+index.js:56 
+          name:Bermuda
+          capital:Hamilton
+            flags:https://restcountries.eu/data/bmu.svg
+            
+index.js:56 
+          name:Bhutan
+          capital:Thimphu
+            flags:https://restcountries.eu/data/btn.svg
+            
+index.js:56 
+          name:Bolivia (Plurinational State of)
+          capital:Sucre
+            flags:https://restcountries.eu/data/bol.svg
+            
+index.js:56 
+          name:Bonaire, Sint Eustatius and Saba
+          capital:Kralendijk
+            flags:https://restcountries.eu/data/bes.svg
+            
+index.js:56 
+          name:Bosnia and Herzegovina
+          capital:Sarajevo
+            flags:https://restcountries.eu/data/bih.svg
+            
+index.js:56 
+          name:Botswana
+          capital:Gaborone
+            flags:https://restcountries.eu/data/bwa.svg
+            
+index.js:56 
+          name:Bouvet Island
+          capital:
+            flags:https://restcountries.eu/data/bvt.svg
+            
+index.js:56 
+          name:Brazil
+          capital:Brasília
+            flags:https://restcountries.eu/data/bra.svg
+            
+index.js:56 
+          name:British Indian Ocean Territory
+          capital:Diego Garcia
+            flags:https://restcountries.eu/data/iot.svg
+            
+index.js:56 
+          name:United States Minor Outlying Islands
+          capital:
+            flags:https://restcountries.eu/data/umi.svg
+            
+index.js:56 
+          name:Virgin Islands (British)
+          capital:Road Town
+            flags:https://restcountries.eu/data/vgb.svg
+            
+index.js:56 
+          name:Virgin Islands (U.S.)
+          capital:Charlotte Amalie
+            flags:https://restcountries.eu/data/vir.svg
+            
+index.js:56 
+          name:Brunei Darussalam
+          capital:Bandar Seri Begawan
+            flags:https://restcountries.eu/data/brn.svg
+            
+index.js:56 
+          name:Bulgaria
+          capital:Sofia
+            flags:https://restcountries.eu/data/bgr.svg
+            
+index.js:56 
+          name:Burkina Faso
+          capital:Ouagadougou
+            flags:https://restcountries.eu/data/bfa.svg
+            
+index.js:56 
+          name:Burundi
+          capital:Bujumbura
+            flags:https://restcountries.eu/data/bdi.svg
+            
+index.js:56 
+          name:Cambodia
+          capital:Phnom Penh
+            flags:https://restcountries.eu/data/khm.svg
+            
+index.js:56 
+          name:Cameroon
+          capital:Yaoundé
+            flags:https://restcountries.eu/data/cmr.svg
+            
+index.js:56 
+          name:Canada
+          capital:Ottawa
+            flags:https://restcountries.eu/data/can.svg
+            
+index.js:56 
+          name:Cabo Verde
+          capital:Praia
+            flags:https://restcountries.eu/data/cpv.svg
+            
+index.js:56 
+          name:Cayman Islands
+          capital:George Town
+            flags:https://restcountries.eu/data/cym.svg
+            
+index.js:56 
+          name:Central African Republic
+          capital:Bangui
+            flags:https://restcountries.eu/data/caf.svg
+            
+index.js:56 
+          name:Chad
+          capital:N'Djamena
+            flags:https://restcountries.eu/data/tcd.svg
+            
+index.js:56 
+          name:Chile
+          capital:Santiago
+            flags:https://restcountries.eu/data/chl.svg
+            
+index.js:56 
+          name:China
+          capital:Beijing
+            flags:https://restcountries.eu/data/chn.svg
+            
+index.js:56 
+          name:Christmas Island
+          capital:Flying Fish Cove
+            flags:https://restcountries.eu/data/cxr.svg
+            
+index.js:56 
+          name:Cocos (Keeling) Islands
+          capital:West Island
+            flags:https://restcountries.eu/data/cck.svg
+            
+index.js:56 
+          name:Colombia
+          capital:Bogotá
+            flags:https://restcountries.eu/data/col.svg
+            
+index.js:56 
+          name:Comoros
+          capital:Moroni
+            flags:https://restcountries.eu/data/com.svg
+            
+index.js:56 
+          name:Congo
+          capital:Brazzaville
+            flags:https://restcountries.eu/data/cog.svg
+            
+index.js:56 
+          name:Congo (Democratic Republic of the)
+          capital:Kinshasa
+            flags:https://restcountries.eu/data/cod.svg
+            
+index.js:56 
+          name:Cook Islands
+          capital:Avarua
+            flags:https://restcountries.eu/data/cok.svg
+            
+index.js:56 
+          name:Costa Rica
+          capital:San José
+            flags:https://restcountries.eu/data/cri.svg
+            
+index.js:56 
+          name:Croatia
+          capital:Zagreb
+            flags:https://restcountries.eu/data/hrv.svg
+            
+index.js:56 
+          name:Cuba
+          capital:Havana
+            flags:https://restcountries.eu/data/cub.svg
+            
+index.js:56 
+          name:Curaçao
+          capital:Willemstad
+            flags:https://restcountries.eu/data/cuw.svg
+            
+index.js:56 
+          name:Cyprus
+          capital:Nicosia
+            flags:https://restcountries.eu/data/cyp.svg
+            
+index.js:56 
+          name:Czech Republic
+          capital:Prague
+            flags:https://restcountries.eu/data/cze.svg
+            
+index.js:56 
+          name:Denmark
+          capital:Copenhagen
+            flags:https://restcountries.eu/data/dnk.svg
+            
+index.js:56 
+          name:Djibouti
+          capital:Djibouti
+            flags:https://restcountries.eu/data/dji.svg
+            
+index.js:56 
+          name:Dominica
+          capital:Roseau
+            flags:https://restcountries.eu/data/dma.svg
+            
+index.js:56 
+          name:Dominican Republic
+          capital:Santo Domingo
+            flags:https://restcountries.eu/data/dom.svg
+            
+index.js:56 
+          name:Ecuador
+          capital:Quito
+            flags:https://restcountries.eu/data/ecu.svg
+            
+index.js:56 
+          name:Egypt
+          capital:Cairo
+            flags:https://restcountries.eu/data/egy.svg
+            
+index.js:56 
+          name:El Salvador
+          capital:San Salvador
+            flags:https://restcountries.eu/data/slv.svg
+            
+index.js:56 
+          name:Equatorial Guinea
+          capital:Malabo
+            flags:https://restcountries.eu/data/gnq.svg
+            
+index.js:56 
+          name:Eritrea
+          capital:Asmara
+            flags:https://restcountries.eu/data/eri.svg
+            
+index.js:56 
+          name:Estonia
+          capital:Tallinn
+            flags:https://restcountries.eu/data/est.svg
+            
+index.js:56 
+          name:Ethiopia
+          capital:Addis Ababa
+            flags:https://restcountries.eu/data/eth.svg
+            
+index.js:56 
+          name:Falkland Islands (Malvinas)
+          capital:Stanley
+            flags:https://restcountries.eu/data/flk.svg
+            
+index.js:56 
+          name:Faroe Islands
+          capital:Tórshavn
+            flags:https://restcountries.eu/data/fro.svg
+            
+index.js:56 
+          name:Fiji
+          capital:Suva
+            flags:https://restcountries.eu/data/fji.svg
+            
+index.js:56 
+          name:Finland
+          capital:Helsinki
+            flags:https://restcountries.eu/data/fin.svg
+            
+index.js:56 
+          name:France
+          capital:Paris
+            flags:https://restcountries.eu/data/fra.svg
+            
+index.js:56 
+          name:French Guiana
+          capital:Cayenne
+            flags:https://restcountries.eu/data/guf.svg
+            
+index.js:56 
+          name:French Polynesia
+          capital:Papeetē
+            flags:https://restcountries.eu/data/pyf.svg
+            
+index.js:56 
+          name:French Southern Territories
+          capital:Port-aux-Français
+            flags:https://restcountries.eu/data/atf.svg
+            
+index.js:56 
+          name:Gabon
+          capital:Libreville
+            flags:https://restcountries.eu/data/gab.svg
+            
+index.js:56 
+          name:Gambia
+          capital:Banjul
+            flags:https://restcountries.eu/data/gmb.svg
+            
+index.js:56 
+          name:Georgia
+          capital:Tbilisi
+            flags:https://restcountries.eu/data/geo.svg
+            
+index.js:56 
+          name:Germany
+          capital:Berlin
+            flags:https://restcountries.eu/data/deu.svg
+            
+index.js:56 
+          name:Ghana
+          capital:Accra
+            flags:https://restcountries.eu/data/gha.svg
+            
+index.js:56 
+          name:Gibraltar
+          capital:Gibraltar
+            flags:https://restcountries.eu/data/gib.svg
+            
+index.js:56 
+          name:Greece
+          capital:Athens
+            flags:https://restcountries.eu/data/grc.svg
+            
+index.js:56 
+          name:Greenland
+          capital:Nuuk
+            flags:https://restcountries.eu/data/grl.svg
+            
+index.js:56 
+          name:Grenada
+          capital:St. George's
+            flags:https://restcountries.eu/data/grd.svg
+            
+index.js:56 
+          name:Guadeloupe
+          capital:Basse-Terre
+            flags:https://restcountries.eu/data/glp.svg
+            
+index.js:56 
+          name:Guam
+          capital:Hagåtña
+            flags:https://restcountries.eu/data/gum.svg
+            
+index.js:56 
+          name:Guatemala
+          capital:Guatemala City
+            flags:https://restcountries.eu/data/gtm.svg
+            
+index.js:56 
+          name:Guernsey
+          capital:St. Peter Port
+            flags:https://restcountries.eu/data/ggy.svg
+            
+index.js:56 
+          name:Guinea
+          capital:Conakry
+            flags:https://restcountries.eu/data/gin.svg
+            
+index.js:56 
+          name:Guinea-Bissau
+          capital:Bissau
+            flags:https://restcountries.eu/data/gnb.svg
+            
+index.js:56 
+          name:Guyana
+          capital:Georgetown
+            flags:https://restcountries.eu/data/guy.svg
+            
+index.js:56 
+          name:Haiti
+          capital:Port-au-Prince
+            flags:https://restcountries.eu/data/hti.svg
+            
+index.js:56 
+          name:Heard Island and McDonald Islands
+          capital:
+            flags:https://restcountries.eu/data/hmd.svg
+            
+index.js:56 
+          name:Holy See
+          capital:Rome
+            flags:https://restcountries.eu/data/vat.svg
+            
+index.js:56 
+          name:Honduras
+          capital:Tegucigalpa
+            flags:https://restcountries.eu/data/hnd.svg
+            
+index.js:56 
+          name:Hong Kong
+          capital:City of Victoria
+            flags:https://restcountries.eu/data/hkg.svg
+            
+index.js:56 
+          name:Hungary
+          capital:Budapest
+            flags:https://restcountries.eu/data/hun.svg
+            
+index.js:56 
+          name:Iceland
+          capital:Reykjavík
+            flags:https://restcountries.eu/data/isl.svg
+            
+index.js:56 
+          name:India
+          capital:New Delhi
+            flags:https://restcountries.eu/data/ind.svg
+            
+index.js:56 
+          name:Indonesia
+          capital:Jakarta
+            flags:https://restcountries.eu/data/idn.svg
+            
+index.js:56 
+          name:Côte d'Ivoire
+          capital:Yamoussoukro
+            flags:https://restcountries.eu/data/civ.svg
+            
+index.js:56 
+          name:Iran (Islamic Republic of)
+          capital:Tehran
+            flags:https://restcountries.eu/data/irn.svg
+            
+index.js:56 
+          name:Iraq
+          capital:Baghdad
+            flags:https://restcountries.eu/data/irq.svg
+            
+index.js:56 
+          name:Ireland
+          capital:Dublin
+            flags:https://restcountries.eu/data/irl.svg
+            
+index.js:56 
+          name:Isle of Man
+          capital:Douglas
+            flags:https://restcountries.eu/data/imn.svg
+            
+index.js:56 
+          name:Israel
+          capital:Jerusalem
+            flags:https://restcountries.eu/data/isr.svg
+            
+index.js:56 
+          name:Italy
+          capital:Rome
+            flags:https://restcountries.eu/data/ita.svg
+            
+index.js:56 
+          name:Jamaica
+          capital:Kingston
+            flags:https://restcountries.eu/data/jam.svg
+            
+index.js:56 
+          name:Japan
+          capital:Tokyo
+            flags:https://restcountries.eu/data/jpn.svg
+            
+index.js:56 
+          name:Jersey
+          capital:Saint Helier
+            flags:https://restcountries.eu/data/jey.svg
+            
+index.js:56 
+          name:Jordan
+          capital:Amman
+            flags:https://restcountries.eu/data/jor.svg
+            
+index.js:56 
+          name:Kazakhstan
+          capital:Astana
+            flags:https://restcountries.eu/data/kaz.svg
+            
+index.js:56 
+          name:Kenya
+          capital:Nairobi
+            flags:https://restcountries.eu/data/ken.svg
+            
+index.js:56 
+          name:Kiribati
+          capital:South Tarawa
+            flags:https://restcountries.eu/data/kir.svg
+            
+index.js:56 
+          name:Kuwait
+          capital:Kuwait City
+            flags:https://restcountries.eu/data/kwt.svg
+            
+index.js:56 
+          name:Kyrgyzstan
+          capital:Bishkek
+            flags:https://restcountries.eu/data/kgz.svg
+            
+index.js:56 
+          name:Lao People's Democratic Republic
+          capital:Vientiane
+            flags:https://restcountries.eu/data/lao.svg
+            
+index.js:56 
+          name:Latvia
+          capital:Riga
+            flags:https://restcountries.eu/data/lva.svg
+            
+index.js:56 
+          name:Lebanon
+          capital:Beirut
+            flags:https://restcountries.eu/data/lbn.svg
+            
+index.js:56 
+          name:Lesotho
+          capital:Maseru
+            flags:https://restcountries.eu/data/lso.svg
+            
+index.js:56 
+          name:Liberia
+          capital:Monrovia
+            flags:https://restcountries.eu/data/lbr.svg
+            
+index.js:56 
+          name:Libya
+          capital:Tripoli
+            flags:https://restcountries.eu/data/lby.svg
+            
+index.js:56 
+          name:Liechtenstein
+          capital:Vaduz
+            flags:https://restcountries.eu/data/lie.svg
+            
+index.js:56 
+          name:Lithuania
+          capital:Vilnius
+            flags:https://restcountries.eu/data/ltu.svg
+            
+index.js:56 
+          name:Luxembourg
+          capital:Luxembourg
+            flags:https://restcountries.eu/data/lux.svg
+            
+index.js:56 
+          name:Macao
+          capital:
+            flags:https://restcountries.eu/data/mac.svg
+            
+index.js:56 
+          name:Macedonia (the former Yugoslav Republic of)
+          capital:Skopje
+            flags:https://restcountries.eu/data/mkd.svg
+            
+index.js:56 
+          name:Madagascar
+          capital:Antananarivo
+            flags:https://restcountries.eu/data/mdg.svg
+            
+index.js:56 
+          name:Malawi
+          capital:Lilongwe
+            flags:https://restcountries.eu/data/mwi.svg
+            
+index.js:56 
+          name:Malaysia
+          capital:Kuala Lumpur
+            flags:https://restcountries.eu/data/mys.svg
+            
+index.js:56 
+          name:Maldives
+          capital:Malé
+            flags:https://restcountries.eu/data/mdv.svg
+            
+index.js:56 
+          name:Mali
+          capital:Bamako
+            flags:https://restcountries.eu/data/mli.svg
+            
+index.js:56 
+          name:Malta
+          capital:Valletta
+            flags:https://restcountries.eu/data/mlt.svg
+            
+index.js:56 
+          name:Marshall Islands
+          capital:Majuro
+            flags:https://restcountries.eu/data/mhl.svg
+            
+index.js:56 
+          name:Martinique
+          capital:Fort-de-France
+            flags:https://restcountries.eu/data/mtq.svg
+            
+index.js:56 
+          name:Mauritania
+          capital:Nouakchott
+            flags:https://restcountries.eu/data/mrt.svg
+            
+index.js:56 
+          name:Mauritius
+          capital:Port Louis
+            flags:https://restcountries.eu/data/mus.svg
+            
+index.js:56 
+          name:Mayotte
+          capital:Mamoudzou
+            flags:https://restcountries.eu/data/myt.svg
+            
+index.js:56 
+          name:Mexico
+          capital:Mexico City
+            flags:https://restcountries.eu/data/mex.svg
+            
+index.js:56 
+          name:Micronesia (Federated States of)
+          capital:Palikir
+            flags:https://restcountries.eu/data/fsm.svg
+            
+index.js:56 
+          name:Moldova (Republic of)
+          capital:Chișinău
+            flags:https://restcountries.eu/data/mda.svg
+            
+index.js:56 
+          name:Monaco
+          capital:Monaco
+            flags:https://restcountries.eu/data/mco.svg
+            
+index.js:56 
+          name:Mongolia
+          capital:Ulan Bator
+            flags:https://restcountries.eu/data/mng.svg
+            
+index.js:56 
+          name:Montenegro
+          capital:Podgorica
+            flags:https://restcountries.eu/data/mne.svg
+            
+index.js:56 
+          name:Montserrat
+          capital:Plymouth
+            flags:https://restcountries.eu/data/msr.svg
+            
+index.js:56 
+          name:Morocco
+          capital:Rabat
+            flags:https://restcountries.eu/data/mar.svg
+            
+index.js:56 
+          name:Mozambique
+          capital:Maputo
+            flags:https://restcountries.eu/data/moz.svg
+            
+index.js:56 
+          name:Myanmar
+          capital:Naypyidaw
+            flags:https://restcountries.eu/data/mmr.svg
+            
+index.js:56 
+          name:Namibia
+          capital:Windhoek
+            flags:https://restcountries.eu/data/nam.svg
+            
+index.js:56 
+          name:Nauru
+          capital:Yaren
+            flags:https://restcountries.eu/data/nru.svg
+            
+index.js:56 
+          name:Nepal
+          capital:Kathmandu
+            flags:https://restcountries.eu/data/npl.svg
+            
+index.js:56 
+          name:Netherlands
+          capital:Amsterdam
+            flags:https://restcountries.eu/data/nld.svg
+            
+index.js:56 
+          name:New Caledonia
+          capital:Nouméa
+            flags:https://restcountries.eu/data/ncl.svg
+            
+index.js:56 
+          name:New Zealand
+          capital:Wellington
+            flags:https://restcountries.eu/data/nzl.svg
+            
+index.js:56 
+          name:Nicaragua
+          capital:Managua
+            flags:https://restcountries.eu/data/nic.svg
+            
+index.js:56 
+          name:Niger
+          capital:Niamey
+            flags:https://restcountries.eu/data/ner.svg
+            
+index.js:56 
+          name:Nigeria
+          capital:Abuja
+            flags:https://restcountries.eu/data/nga.svg
+            
+index.js:56 
+          name:Niue
+          capital:Alofi
+            flags:https://restcountries.eu/data/niu.svg
+            
+index.js:56 
+          name:Norfolk Island
+          capital:Kingston
+            flags:https://restcountries.eu/data/nfk.svg
+            
+index.js:56 
+          name:Korea (Democratic People's Republic of)
+          capital:Pyongyang
+            flags:https://restcountries.eu/data/prk.svg
+            
+index.js:56 
+          name:Northern Mariana Islands
+          capital:Saipan
+            flags:https://restcountries.eu/data/mnp.svg
+            
+index.js:56 
+          name:Norway
+          capital:Oslo
+            flags:https://restcountries.eu/data/nor.svg
+            
+index.js:56 
+          name:Oman
+          capital:Muscat
+            flags:https://restcountries.eu/data/omn.svg
+            
+index.js:56 
+          name:Pakistan
+          capital:Islamabad
+            flags:https://restcountries.eu/data/pak.svg
+            
+index.js:56 
+          name:Palau
+          capital:Ngerulmud
+            flags:https://restcountries.eu/data/plw.svg
+            
+index.js:56 
+          name:Palestine, State of
+          capital:Ramallah
+            flags:https://restcountries.eu/data/pse.svg
+            
+index.js:56 
+          name:Panama
+          capital:Panama City
+            flags:https://restcountries.eu/data/pan.svg
+            
+index.js:56 
+          name:Papua New Guinea
+          capital:Port Moresby
+            flags:https://restcountries.eu/data/png.svg
+            
+index.js:56 
+          name:Paraguay
+          capital:Asunción
+            flags:https://restcountries.eu/data/pry.svg
+            
+index.js:56 
+          name:Peru
+          capital:Lima
+            flags:https://restcountries.eu/data/per.svg
+            
+index.js:56 
+          name:Philippines
+          capital:Manila
+            flags:https://restcountries.eu/data/phl.svg
+            
+index.js:56 
+          name:Pitcairn
+          capital:Adamstown
+            flags:https://restcountries.eu/data/pcn.svg
+            
+index.js:56 
+          name:Poland
+          capital:Warsaw
+            flags:https://restcountries.eu/data/pol.svg
+            
+index.js:56 
+          name:Portugal
+          capital:Lisbon
+            flags:https://restcountries.eu/data/prt.svg
+            
+index.js:56 
+          name:Puerto Rico
+          capital:San Juan
+            flags:https://restcountries.eu/data/pri.svg
+            
+index.js:56 
+          name:Qatar
+          capital:Doha
+            flags:https://restcountries.eu/data/qat.svg
+            
+index.js:56 
+          name:Republic of Kosovo
+          capital:Pristina
+            flags:https://restcountries.eu/data/kos.svg
+            
+index.js:56 
+          name:Réunion
+          capital:Saint-Denis
+            flags:https://restcountries.eu/data/reu.svg
+            
+index.js:56 
+          name:Romania
+          capital:Bucharest
+            flags:https://restcountries.eu/data/rou.svg
+            
+index.js:56 
+          name:Russian Federation
+          capital:Moscow
+            flags:https://restcountries.eu/data/rus.svg
+            
+index.js:56 
+          name:Rwanda
+          capital:Kigali
+            flags:https://restcountries.eu/data/rwa.svg
+            
+index.js:56 
+          name:Saint Barthélemy
+          capital:Gustavia
+            flags:https://restcountries.eu/data/blm.svg
+            
+index.js:56 
+          name:Saint Helena, Ascension and Tristan da Cunha
+          capital:Jamestown
+            flags:https://restcountries.eu/data/shn.svg
+            
+index.js:56 
+          name:Saint Kitts and Nevis
+          capital:Basseterre
+            flags:https://restcountries.eu/data/kna.svg
+            
+index.js:56 
+          name:Saint Lucia
+          capital:Castries
+            flags:https://restcountries.eu/data/lca.svg
+            
+index.js:56 
+          name:Saint Martin (French part)
+          capital:Marigot
+            flags:https://restcountries.eu/data/maf.svg
+            
+index.js:56 
+          name:Saint Pierre and Miquelon
+          capital:Saint-Pierre
+            flags:https://restcountries.eu/data/spm.svg
+            
+index.js:56 
+          name:Saint Vincent and the Grenadines
+          capital:Kingstown
+            flags:https://restcountries.eu/data/vct.svg
+            
+index.js:56 
+          name:Samoa
+          capital:Apia
+            flags:https://restcountries.eu/data/wsm.svg
+            
+index.js:56 
+          name:San Marino
+          capital:City of San Marino
+            flags:https://restcountries.eu/data/smr.svg
+            
+index.js:56 
+          name:Sao Tome and Principe
+          capital:São Tomé
+            flags:https://restcountries.eu/data/stp.svg
+            
+index.js:56 
+          name:Saudi Arabia
+          capital:Riyadh
+            flags:https://restcountries.eu/data/sau.svg
+            
+index.js:56 
+          name:Senegal
+          capital:Dakar
+            flags:https://restcountries.eu/data/sen.svg
+            
+index.js:56 
+          name:Serbia
+          capital:Belgrade
+            flags:https://restcountries.eu/data/srb.svg
+            
+index.js:56 
+          name:Seychelles
+          capital:Victoria
+            flags:https://restcountries.eu/data/syc.svg
+            
+index.js:56 
+          name:Sierra Leone
+          capital:Freetown
+            flags:https://restcountries.eu/data/sle.svg
+            
+index.js:56 
+          name:Singapore
+          capital:Singapore
+            flags:https://restcountries.eu/data/sgp.svg
+            
+index.js:56 
+          name:Sint Maarten (Dutch part)
+          capital:Philipsburg
+            flags:https://restcountries.eu/data/sxm.svg
+            
+index.js:56 
+          name:Slovakia
+          capital:Bratislava
+            flags:https://restcountries.eu/data/svk.svg
+            
+index.js:56 
+          name:Slovenia
+          capital:Ljubljana
+            flags:https://restcountries.eu/data/svn.svg
+            
+index.js:56 
+          name:Solomon Islands
+          capital:Honiara
+            flags:https://restcountries.eu/data/slb.svg
+            
+index.js:56 
+          name:Somalia
+          capital:Mogadishu
+            flags:https://restcountries.eu/data/som.svg
+            
+index.js:56 
+          name:South Africa
+          capital:Pretoria
+            flags:https://restcountries.eu/data/zaf.svg
+            
+index.js:56 
+          name:South Georgia and the South Sandwich Islands
+          capital:King Edward Point
+            flags:https://restcountries.eu/data/sgs.svg
+            
+index.js:56 
+          name:Korea (Republic of)
+          capital:Seoul
+            flags:https://restcountries.eu/data/kor.svg
+            
+index.js:56 
+          name:South Sudan
+          capital:Juba
+            flags:https://restcountries.eu/data/ssd.svg
+            
+index.js:56 
+          name:Spain
+          capital:Madrid
+            flags:https://restcountries.eu/data/esp.svg
+            
+index.js:56 
+          name:Sri Lanka
+          capital:Colombo
+            flags:https://restcountries.eu/data/lka.svg
+            
+index.js:56 
+          name:Sudan
+          capital:Khartoum
+            flags:https://restcountries.eu/data/sdn.svg
+            
+index.js:56 
+          name:Suriname
+          capital:Paramaribo
+            flags:https://restcountries.eu/data/sur.svg
+            
+index.js:56 
+          name:Svalbard and Jan Mayen
+          capital:Longyearbyen
+            flags:https://restcountries.eu/data/sjm.svg
+            
+index.js:56 
+          name:Swaziland
+          capital:Lobamba
+            flags:https://restcountries.eu/data/swz.svg
+            
+index.js:56 
+          name:Sweden
+          capital:Stockholm
+            flags:https://restcountries.eu/data/swe.svg
+            
+index.js:56 
+          name:Switzerland
+          capital:Bern
+            flags:https://restcountries.eu/data/che.svg
+            
+index.js:56 
+          name:Syrian Arab Republic
+          capital:Damascus
+            flags:https://restcountries.eu/data/syr.svg
+            
+index.js:56 
+          name:Taiwan
+          capital:Taipei
+            flags:https://restcountries.eu/data/twn.svg
+            
+index.js:56 
+          name:Tajikistan
+          capital:Dushanbe
+            flags:https://restcountries.eu/data/tjk.svg
+            
+index.js:56 
+          name:Tanzania, United Republic of
+          capital:Dodoma
+            flags:https://restcountries.eu/data/tza.svg
+            
+index.js:56 
+          name:Thailand
+          capital:Bangkok
+            flags:https://restcountries.eu/data/tha.svg
+            
+index.js:56 
+          name:Timor-Leste
+          capital:Dili
+            flags:https://restcountries.eu/data/tls.svg
+            
+index.js:56 
+          name:Togo
+          capital:Lomé
+            flags:https://restcountries.eu/data/tgo.svg
+            
+index.js:56 
+          name:Tokelau
+          capital:Fakaofo
+            flags:https://restcountries.eu/data/tkl.svg
+            
+index.js:56 
+          name:Tonga
+          capital:Nuku'alofa
+            flags:https://restcountries.eu/data/ton.svg
+            
+index.js:56 
+          name:Trinidad and Tobago
+          capital:Port of Spain
+            flags:https://restcountries.eu/data/tto.svg
+            
+index.js:56 
+          name:Tunisia
+          capital:Tunis
+            flags:https://restcountries.eu/data/tun.svg
+            
+index.js:56 
+          name:Turkey
+          capital:Ankara
+            flags:https://restcountries.eu/data/tur.svg
+            
+index.js:56 
+          name:Turkmenistan
+          capital:Ashgabat
+            flags:https://restcountries.eu/data/tkm.svg
+            
+index.js:56 
+          name:Turks and Caicos Islands
+          capital:Cockburn Town
+            flags:https://restcountries.eu/data/tca.svg
+            
+index.js:56 
+          name:Tuvalu
+          capital:Funafuti
+            flags:https://restcountries.eu/data/tuv.svg
+            
+index.js:56 
+          name:Uganda
+          capital:Kampala
+            flags:https://restcountries.eu/data/uga.svg
+            
+index.js:56 
+          name:Ukraine
+          capital:Kiev
+            flags:https://restcountries.eu/data/ukr.svg
+            
+index.js:56 
+          name:United Arab Emirates
+          capital:Abu Dhabi
+            flags:https://restcountries.eu/data/are.svg
+            
+index.js:56 
+          name:United Kingdom of Great Britain and Northern Ireland
+          capital:London
+            flags:https://restcountries.eu/data/gbr.svg
+            
+index.js:56 
+          name:United States of America
+          capital:Washington, D.C.
+            flags:https://restcountries.eu/data/usa.svg
+            
+index.js:56 
+          name:Uruguay
+          capital:Montevideo
+            flags:https://restcountries.eu/data/ury.svg
+            
+index.js:56 
+          name:Uzbekistan
+          capital:Tashkent
+            flags:https://restcountries.eu/data/uzb.svg
+            
+index.js:56 
+          name:Vanuatu
+          capital:Port Vila
+            flags:https://restcountries.eu/data/vut.svg
+            
+index.js:56 
+          name:Venezuela (Bolivarian Republic of)
+          capital:Caracas
+            flags:https://restcountries.eu/data/ven.svg
+            
+index.js:56 
+          name:Viet Nam
+          capital:Hanoi
+            flags:https://restcountries.eu/data/vnm.svg
+            
+index.js:56 
+          name:Wallis and Futuna
+          capital:Mata-Utu
+            flags:https://restcountries.eu/data/wlf.svg
+            
+index.js:56 
+          name:Western Sahara
+          capital:El Aaiún
+            flags:https://restcountries.eu/data/esh.svg
+            
+index.js:56 
+          name:Yemen
+          capital:Sana'a
+            flags:https://restcountries.eu/data/yem.svg
+            
+index.js:56 
+          name:Zambia
+          capital:Lusaka
+            flags:https://restcountries.eu/data/zmb.svg
+            
+index.js:56 
+          name:Zimbabwe
+          capital:Harare
+            flags:https://restcountries.eu/data/zwe.svg
+            
+
+d.print the total population of countries using reduce function.
+
+//1.setup our http request
+let xhr=new XMLHttpRequest();
+
+//2.open the request
+xhr.open('GET','https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json')
+
+//setup our listener to process the complete request
+xhr.onload=function(){
+    if(xhr.status>=200&& xhr.status<300){
+        //only if request is ok and received the data
+        let data=JSON.parse(this.response);
+        console.log(data);
+
+        let data1=data.reduce((previous,current)=> {
+          return previous+current.population
+        },0);
+        console.log(data1);
+
+}else{
+//run if the request is not ok
+console.log("error");
+}
+}
+
+//send the request
+xhr.send();
+
+
+output(d):
+
+7349137231
+
+e.print the countries which uses US Dollars as currency.
+
+//1.setup our http request
+let xhr=new XMLHttpRequest();
+
+//2.open the request
+xhr.open('GET','https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json')
+
+//setup our listener to process the complete request
+xhr.onload=function(){
+    if(xhr.status>=200&& xhr.status<300){
+        //only if request is ok and received the data
+        let data=JSON.parse(this.response);
+        console.log(data);
+
+        let data1=data.filter((data)=>data.currencies[0].code==="USD");
+        console.log(data1);
+        data1.map((data)=>console.log(data.name));
+
+}else{
+//run if the request is not ok
+console.log("error");
+}
+}
+
+//send the request
+xhr.send();
+
+
+output(e):
+
+index.js:57 American Samoa
+index.js:57 Bonaire, Sint Eustatius and Saba
+index.js:57 British Indian Ocean Territory
+index.js:57 United States Minor Outlying Islands
+index.js:57 Virgin Islands (U.S.)
+index.js:57 Ecuador
+index.js:57 El Salvador
+index.js:57 Guam
+index.js:57 Marshall Islands
+index.js:57 Northern Mariana Islands
+index.js:57 Puerto Rico
+index.js:57 Timor-Leste
+index.js:57 Turks and Caicos Islands
+index.js:57 United States of America
+
